@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Menu, X } from "lucide-react";
+import LogoReus from "../assets/LogoReus.png"; // Adjust the path as necessary
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -10,7 +11,7 @@ const Navbar: React.FC = () => {
     <header className="bg-white fixed top-0 left-0 w-full z-50">
       <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
         {/* Logo */}
-        <img className="w-24" src="/assets/LogoReus.png" alt="1705" />
+        <img className="w-24" src={LogoReus} alt="1705" />
 
         {/* Desktop nav */}
         <nav className="hidden md:flex space-x-8 text-gray-700 font-medium">
