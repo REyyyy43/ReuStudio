@@ -15,6 +15,7 @@ import cellphoneSvgImg from "./assets/cellphone.svg";
 import dutaxyImg from "./assets/dutaxy.png";
 import cellphonePngImg from "./assets/cellphone.png";
 import resultsImg from "./assets/Results.png";
+import whatsappImg from "./assets/whatsapp.svg";
 
 const App: React.FC = () => {
   useEffect(() => {
@@ -26,11 +27,14 @@ const App: React.FC = () => {
 
   return (
     <>
-      <main className="bg-white text-gray-900 from-white to-blue-50 bg-gradient-to-r font-sans">
+      <main className="bg-white overflow-x-hidden text-gray-900 from-white to-blue-50 bg-gradient-to-r font-sans">
         <NavBar />
 
         {/* HERO SECTION */}
-        <section id="inicio" className="flex flex-col md:flex-row items-center min-h-screen px-6 py-16">
+        <section
+          id="inicio"
+          className="flex flex-col md:flex-row items-center min-h-screen px-6 py-16"
+        >
           <div
             className="flex-1 text-center md:text-left"
             data-aos="fade-right"
@@ -62,7 +66,10 @@ const App: React.FC = () => {
         {/* ABOUT US */}
         <section id="nosotros" className="py-20 px-6 bg-white">
           <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-10">
-            <div className="w-2/4 max-w-2xl mx-auto mt-10 px-4" data-aos="fade-right">
+            <div
+              className="w-2/4 max-w-2xl mx-auto mt-10 px-4"
+              data-aos="fade-right"
+            >
               <img
                 src={sentMessImg}
                 alt="Sobre Nosotros"
@@ -78,7 +85,10 @@ const App: React.FC = () => {
                 conocer tus necesidades reales y construir soluciones únicas
                 para ti, sin plantillas genéricas ni respuestas automáticas.
               </p>
-              <a href="https://wa.me/584127071299" className="bg-[#14c2c2] cursor-pointer text-white py-3 px-6 rounded-full shadow hover:bg-[#ffffff] hover:text-[#005e5e] hover:border transition">
+              <a
+                href="https://wa.me/584127071299"
+                className="bg-[#14c2c2] cursor-pointer text-white py-3 px-6 rounded-full shadow hover:bg-[#ffffff] hover:text-[#005e5e] hover:border transition"
+              >
                 Saber más
               </a>
             </div>
@@ -319,7 +329,10 @@ const App: React.FC = () => {
         </section>
 
         {/* SECCIÓN MOTIVACIONAL */}
-        <section className="bg-[#007E7E] text-white py-20 px-6 text-center" data-aos="fade-up">
+        <section
+          className="bg-[#007E7E] text-white py-20 px-6 text-center"
+          data-aos="fade-up"
+        >
           <div className="max-w-3xl mx-auto">
             <h2 className="text-6xl font-extrabold mb-6 leading-tight">
               Tu idea merece convertirse en una marca real.
@@ -342,6 +355,17 @@ const App: React.FC = () => {
           <p className="mb-2">© 2025 REUS. Todos los derechos reservados.</p>
           <p className="text-sm">Hecho en Venezuela</p>
         </footer>
+
+        {/* BOTÓN FLOTANTE DE WHATSAPP */}
+        <a
+          href="https://wa.me/584127071299"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="fixed bottom-5 right-5 z-50 bg-[#25D366] hover:bg-[#14c2c2] text-white w-14 h-14 flex items-center justify-center rounded-full shadow-lg transition duration-300"
+          aria-label="Chatea con nosotros en WhatsApp"
+        >
+          <img className="w-6 h-6" src={whatsappImg} alt="contacto" />
+        </a>
       </main>
     </>
   );
