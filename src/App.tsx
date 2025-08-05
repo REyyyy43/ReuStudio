@@ -1,5 +1,7 @@
-import React from "react";
+import React, { useEffect } from "react";
 import NavBar from "./components/NavBar";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 import boxingImg from "./assets/boxing.svg";
 import sentMessImg from "./assets/sent-mess.svg";
@@ -15,14 +17,24 @@ import cellphonePngImg from "./assets/cellphone.png";
 import resultsImg from "./assets/Results.png";
 
 const App: React.FC = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 800,
+      once: false,
+    });
+  }, []);
+
   return (
     <>
       <main className="bg-white text-gray-900 from-white to-blue-50 bg-gradient-to-r font-sans">
         <NavBar />
 
         {/* HERO SECTION */}
-        <section className="flex flex-col md:flex-row items-center min-h-screen px-6 py-16">
-          <div className="flex-1 text-center md:text-left animate-fade-in-left">
+        <section id="inicio" className="flex flex-col md:flex-row items-center min-h-screen px-6 py-16">
+          <div
+            className="flex-1 text-center md:text-left"
+            data-aos="fade-right"
+          >
             <h1 className="text-5xl md:text-6xl font-bold leading-tight text-gray-900 mb-4 font-sans">
               Impulsa tu Marca con REDENLY
             </h1>
@@ -38,7 +50,7 @@ const App: React.FC = () => {
               ¡Comienza ahora!
             </a>
           </div>
-          <div className="flex-1 mt-10 md:mt-0 animate-fade-in-right">
+          <div className="flex-1 mt-10 md:mt-0" data-aos="fade-left">
             <img
               src={boxingImg}
               alt="Diseño y desarrollo REUS"
@@ -48,16 +60,16 @@ const App: React.FC = () => {
         </section>
 
         {/* ABOUT US */}
-        <section className="py-20 px-6 bg-white">
+        <section id="nosotros" className="py-20 px-6 bg-white">
           <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-10">
-            <div className="w-2/4 max-w-2xl mx-auto mt-10 px-4 animate-fade-in-left">
+            <div className="w-2/4 max-w-2xl mx-auto mt-10 px-4" data-aos="fade-right">
               <img
                 src={sentMessImg}
                 alt="Sobre Nosotros"
                 className="w-full h-auto object-contain rounded-lg"
               />
             </div>
-            <div className="flex-1 animate-fade-in-right">
+            <div className="flex-1" data-aos="fade-left">
               <h2 className="text-4xl font-bold mb-4 text-gray-900 font-sans">
                 Atención 100% Personalizada
               </h2>
@@ -74,8 +86,8 @@ const App: React.FC = () => {
         </section>
 
         {/* VALORES DIFERENCIALES */}
-        <section className="bg-gray-50 py-20 px-6">
-          <div className="max-w-6xl mx-auto text-center animate-fade-in-up">
+        <section id="beneficios" className="bg-gray-50 py-20 px-6">
+          <div className="max-w-6xl mx-auto text-center" data-aos="fade-up">
             <h2 className="text-5xl font-bold mb-10 text-[#14c2c2] font-sans">
               ¿Por qué elegirnos?
             </h2>
@@ -102,7 +114,8 @@ const App: React.FC = () => {
               ].map(({ imgSrc, alt, title, desc }, idx) => (
                 <div
                   key={idx}
-                  className="bg-white p-8 rounded-lg shadow-[0_8px_15px_-5px_rgba(0,126,126,0.5)] animate-fade-in-up"
+                  className="bg-white p-8 rounded-lg shadow-[0_8px_15px_-5px_rgba(0,126,126,0.5)]"
+                  data-aos="zoom-in"
                 >
                   <img
                     src={imgSrc}
@@ -120,7 +133,7 @@ const App: React.FC = () => {
 
         {/* REFERENCIAS */}
         <section className="bg-white py-20 px-6">
-          <div className="max-w-6xl mx-auto text-center animate-fade-in">
+          <div className="max-w-6xl mx-auto text-center" data-aos="fade-up">
             <h2 className="text-5xl font-bold mb-10">
               <span className="text-[#14c2c2]">Re</span>ferencias
             </h2>
@@ -136,14 +149,15 @@ const App: React.FC = () => {
                 loop
                 muted
                 playsInline
+                data-aos="zoom-in"
               />
             </div>
           </div>
         </section>
 
         {/* ¿CÓMO FUNCIONA? */}
-        <section className="bg-white py-20 px-6">
-          <div className="max-w-6xl mx-auto text-center animate-fade-in">
+        <section id="actividad" className="bg-white py-20 px-6">
+          <div className="max-w-6xl mx-auto text-center" data-aos="fade-up">
             <h2 className="text-5xl font-bold mb-10">
               <span className="text-[#14c2c2]">¿</span>Cómo funciona
               <span className="text-[#14c2c2]">?</span>
@@ -195,7 +209,8 @@ const App: React.FC = () => {
               ].map(({ imgSrc, alt, title, desc }, idx) => (
                 <div
                   key={idx}
-                  className="p-6 border rounded-lg shadow-[0_8px_15px_-5px_rgba(0,126,126,0.5)] bg-white animate-fade-in"
+                  className="p-6 border rounded-lg shadow-[0_8px_15px_-5px_rgba(0,126,126,0.5)] bg-white"
+                  data-aos="fade-up"
                 >
                   <img
                     src={imgSrc}
@@ -215,7 +230,7 @@ const App: React.FC = () => {
 
         {/* ¿QUÉ HACEMOS? */}
         <section className="bg-white py-20 px-6">
-          <div className="max-w-6xl mx-auto text-center animate-fade-in">
+          <div className="max-w-6xl mx-auto text-center" data-aos="fade-up">
             <h2 className="text-6xl font-bold mb-10">
               <span className="text-[#14c2c2]">Y... </span>
               <span className="text-black">¿Qué hacemos por ti?</span>
@@ -243,7 +258,8 @@ const App: React.FC = () => {
               ].map(({ imgS, alt, title, desc }, idx) => (
                 <div
                   key={idx}
-                  className="p-6 border rounded-lg shadow-sm animate-fade-in bg-white"
+                  className="p-6 border rounded-lg shadow-sm bg-white"
+                  data-aos="zoom-in"
                 >
                   <div className="w-full h-[200px] flex items-center justify-center bg-gray-50 rounded-lg mb-6">
                     <img
@@ -262,8 +278,8 @@ const App: React.FC = () => {
         </section>
 
         {/* PLAN */}
-        <section className="bg-gray-100 py-20 px-6">
-          <div className="max-w-4xl mx-auto text-center animate-fade-in-up">
+        <section id="planes" className="bg-gray-100 py-20 px-6">
+          <div className="max-w-4xl mx-auto text-center" data-aos="fade-up">
             <h2 className="text-6xl font-bold mb-6">
               <span className="text-[#14c2c2]">Empieza</span> hoy a cumplir{" "}
               <span className="text-[#14c2c2]">tus metas!</span>
@@ -272,7 +288,10 @@ const App: React.FC = () => {
               Trabajamos contigo desde cero para ofrecerte justo lo que
               necesitas. Este es el único plan porque cada marca es única.
             </p>
-            <div className="bg-white rounded-lg pb-4 shadow-lg text-left animate-fade-in border border-gray-200">
+            <div
+              className="bg-white rounded-lg pb-4 shadow-lg text-left border border-gray-200"
+              data-aos="zoom-in"
+            >
               <h3 className="bg-[#14c2c2] p-4 text-center text-white font-extrabold text-xl rounded-t-lg">
                 Plan Redenly
               </h3>
@@ -300,7 +319,7 @@ const App: React.FC = () => {
         </section>
 
         {/* SECCIÓN MOTIVACIONAL */}
-        <section className="bg-[#007E7E] text-white py-20 px-6 text-center animate-fade-in">
+        <section className="bg-[#007E7E] text-white py-20 px-6 text-center" data-aos="fade-up">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-6xl font-extrabold mb-6 leading-tight">
               Tu idea merece convertirse en una marca real.
@@ -321,7 +340,7 @@ const App: React.FC = () => {
         {/* FOOTER */}
         <footer className="bg-black text-white text-center py-8 px-4">
           <p className="mb-2">© 2025 REUS. Todos los derechos reservados.</p>
-          <p className="text-sm">Hecho en Venezuela con 💡 y 💻</p>
+          <p className="text-sm">Hecho en Venezuela</p>
         </footer>
       </main>
     </>

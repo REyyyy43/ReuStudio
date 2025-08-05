@@ -17,9 +17,9 @@ const Navbar: React.FC = () => {
         <nav className="hidden md:flex space-x-8 text-gray-700 font-medium">
           <a href="#inicio" className="hover:text-[#007E7E] transition">Inicio</a>
           <a href="#nosotros" className="hover:text-[#007E7E] transition">Sobre Nosotros</a>
-          <a href="#beneficios" className="hover:text-[#007E7E] transition">Por qué elegirnos</a>
-          <a href="#testimonios" className="hover:text-[#007E7E] transition">Testimonios</a>
-          <a href="#contacto" className="hover:text-[#007E7E] transition">Contacto</a>
+          <a href="#beneficios" className="hover:text-[#007E7E] transition">Beneficios</a>
+          <a href="#actividad" className="hover:text-[#007E7E] transition">Como funciona</a>
+          <a href="#planes" className="hover:text-[#007E7E] transition">Nuestros planes</a>
         </nav>
 
         {/* Mobile menu toggle */}
