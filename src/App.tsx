@@ -24,7 +24,7 @@ const App: React.FC = () => {
         <section className="flex flex-col md:flex-row items-center min-h-screen px-6 py-16">
           <div className="flex-1 text-center md:text-left animate-fade-in-left">
             <h1 className="text-5xl md:text-6xl font-bold leading-tight text-gray-900 mb-4 font-sans">
-              Impulsa tu Marca con REUS
+              Impulsa tu Marca con REDENLY
             </h1>
             <p className="text-lg text-gray-700 mb-6 max-w-xl">
               Atención personalizada, automatización profesional y soluciones a tu medida. Con REUS, emprender es más fácil, confiable y rápido.
