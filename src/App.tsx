@@ -43,7 +43,7 @@ const App: React.FC = () => {
               tu medida. Con REUS, emprender es más fácil, confiable y rápido.
             </p>
             <a
-              href="https://wa.me/584141234567"
+              href="https://wa.me/584127071299"
               target="_blank"
               className="inline-block bg-[#14c2c2] text-white font-semibold py-3 px-6 rounded-full shadow hover:text-[#005e5e] hover:bg-[#ffffff] hover:border-1 transition"
             >
@@ -78,9 +78,9 @@ const App: React.FC = () => {
                 conocer tus necesidades reales y construir soluciones únicas
                 para ti, sin plantillas genéricas ni respuestas automáticas.
               </p>
-              <button className="bg-[#14c2c2] cursor-pointer text-white py-3 px-6 rounded-full shadow hover:bg-[#ffffff] hover:text-[#005e5e] hover:border transition">
+              <a href="https://wa.me/584127071299" className="bg-[#14c2c2] cursor-pointer text-white py-3 px-6 rounded-full shadow hover:bg-[#ffffff] hover:text-[#005e5e] hover:border transition">
                 Saber más
-              </button>
+              </a>
             </div>
           </div>
         </section>
@@ -172,7 +172,7 @@ const App: React.FC = () => {
                     <>
                       {" "}
                       <a
-                        href="https://wa.me/584141234567"
+                        href="https://wa.me/584127071299"
                         target="_blank"
                         className="font-semibold text-[#007E7E] underline"
                       >
@@ -329,7 +329,7 @@ const App: React.FC = () => {
               negocio. En REUS Studio lo hacemos contigo desde cero.
             </p>
             <a
-              href="#contacto"
+              href="https://wa.me/584127071299"
               className="inline-block bg-white text-[#007E7E] hover:text-white hover:bg-[#007E7E] hover:border-white hover:border font-bold py-3 px-6 rounded-full transition duration-300"
             >
               Empieza tu tienda online
