@@ -27,7 +27,7 @@ const App: React.FC = () => {
 
   return (
     <>
-      <main className="bg-white overflow-x-hidden text-gray-900 from-white to-blue-50 bg-gradient-to-r font-sans">
+      <main className="bg-white overflow-x-hidden overflow-y-hidden text-gray-900 from-white to-blue-50 bg-gradient-to-r font-sans">
         <NavBar />
 
         {/* HERO SECTION */}
@@ -44,7 +44,8 @@ const App: React.FC = () => {
             </h1>
             <p className="text-lg text-gray-700 mb-6 max-w-xl">
               Atención personalizada, automatización profesional y soluciones a
-              tu medida. Con REUS, emprender es más fácil, confiable y rápido.
+              tu medida. Con REDENLY, emprender es más fácil, confiable y
+              rápido.
             </p>
             <a
               href="https://wa.me/584127071299"
@@ -57,7 +58,7 @@ const App: React.FC = () => {
           <div className="flex-1 mt-10 md:mt-0" data-aos="fade-left">
             <img
               src={boxingImg}
-              alt="Diseño y desarrollo REUS"
+              alt="Diseño y desarrollo REDENLY"
               className="w-full max-w-3xl mx-auto"
             />
           </div>
@@ -81,8 +82,8 @@ const App: React.FC = () => {
                 Atención 100% Personalizada
               </h2>
               <p className="text-gray-700 text-lg mb-6">
-                En REUS, te acompañamos desde el primer clic. Nos enfocamos en
-                conocer tus necesidades reales y construir soluciones únicas
+                En REDENLY, te acompañamos desde el primer clic. Nos enfocamos
+                en conocer tus necesidades reales y construir soluciones únicas
                 para ti, sin plantillas genéricas ni respuestas automáticas.
               </p>
               <a
@@ -101,25 +102,49 @@ const App: React.FC = () => {
             <h2 className="text-5xl font-bold mb-10 text-[#14c2c2] font-sans">
               ¿Por qué elegirnos?
             </h2>
+
             <div className="grid md:grid-cols-3 gap-8">
               {[
                 {
                   imgSrc: tratoHumanoImg,
                   alt: "Trato Humano",
                   title: "Trato Humano",
-                  desc: "No eres un número. Escuchamos tu historia y tus metas para crear tu solución ideal.",
+                  desc: (
+                    <>
+                      No eres un número.{" "}
+                      <span className="underline decoration-yellow-400/60 underline-offset-4 font-medium">
+                        Escuchamos tu historia
+                      </span>{" "}
+                      y tus metas para crear tu solución ideal.
+                    </>
+                  ),
                 },
                 {
                   imgSrc: automatizacionImg,
                   alt: "Automatización Efectiva",
                   title: "Automatización Efectiva",
-                  desc: "Optimiza tu negocio con tecnología moderna sin complicarte la vida.",
+                  desc: (
+                    <>
+                      Optimiza tu negocio con{" "}
+                      <span className="underline decoration-blue-400/60 underline-offset-4 font-medium">
+                        tecnología moderna
+                      </span>{" "}
+                      sin complicarte la vida.
+                    </>
+                  ),
                 },
                 {
                   imgSrc: credibilidadImg,
                   alt: "Credibilidad Real",
                   title: "Credibilidad Real",
-                  desc: "Nuestra comunidad habla por nosotros. Más de 300 marcas confiaron en REUS.",
+                  desc: (
+                    <>
+                      Nuestra comunidad habla por nosotros.{" "}
+                      <span className="underline decoration-green-400/60 underline-offset-4 font-medium">
+                        Más de 300 marcas confiaron en REDENLY.
+                      </span>
+                    </>
+                  ),
                 },
               ].map(({ imgSrc, alt, title, desc }, idx) => (
                 <div
@@ -188,7 +213,8 @@ const App: React.FC = () => {
                       >
                         Clickea aquí
                       </a>{" "}
-                      y cuéntanos qué deseas lograr...{" "}
+                      y cuéntanos lo que deseas lograr, nosotros lo cumplimos,
+                      elige tu plan.{" "}
                     </>
                   ),
                 },
@@ -198,9 +224,8 @@ const App: React.FC = () => {
                   title: "2. Aprobamos juntos tu idea",
                   desc: (
                     <>
-                      {" "}
                       Diseñamos una propuesta visual, tú la revisas y juntos
-                      damos forma al proyecto final.{" "}
+                      damos forma al proyecto final.
                     </>
                   ),
                 },
@@ -210,9 +235,8 @@ const App: React.FC = () => {
                   title: "3. Con el 50% empezamos",
                   desc: (
                     <>
-                      {" "}
                       Inicias el proyecto eligiendo un plan personalizado con el
-                      50%, el resto al final.{" "}
+                      50%, el resto al final.
                     </>
                   ),
                 },
@@ -239,48 +263,99 @@ const App: React.FC = () => {
         </section>
 
         {/* ¿QUÉ HACEMOS? */}
+        {/* ¿QUÉ HACEMOS? */}
         <section className="bg-white py-20 px-6">
           <div className="max-w-6xl mx-auto text-center" data-aos="fade-up">
-            <h2 className="text-6xl font-bold mb-10">
+            <h2 className="text-6xl font-bold mb-16">
               <span className="text-[#14c2c2]">Y... </span>
               <span className="text-black">¿Qué hacemos por ti?</span>
             </h2>
-            <div className="grid md:grid-cols-3 gap-8 text-left">
+
+            <div className="space-y-20">
               {[
                 {
-                  imgS: dutaxyImg,
+                  img: dutaxyImg,
                   alt: "Identidad",
                   title: "1. Diseñamos tu identidad",
-                  desc: "Creamos logo, colores, diseño visual atractivo, público objetivo y metas comerciales.",
+                  desc: (
+                    <>
+                      Tu marca necesita algo más que un logo: necesita contar
+                      una historia. En REDENLY{" "}
+                      <span className="underline decoration-[#facc15]/60 underline-offset-4">
+                        creamos tu identidad visual desde cero
+                      </span>
+                      , con colores, formas y conceptos que conecten con tu
+                      audiencia desde el primer vistazo. Aquí no usamos
+                      plantillas: diseñamos una marca que refleje lo que eres y
+                      hacia dónde vas.
+                    </>
+                  ),
+                  reverse: false,
                 },
                 {
-                  imgS: cellphonePngImg,
+                  img: cellphonePngImg,
                   alt: "Web",
                   title: "2. Creamos tu presencia digital",
-                  desc: "Web profesional, SEO, landing pages, menús digitales y más.",
+                  desc: (
+                    <>
+                      Hoy, si no estás en internet, no existes. Diseñamos{" "}
+                      <span className="underline decoration-[#60a5fa]/60 underline-offset-4">
+                        sitios web modernos, funcionales y enfocados en
+                        resultados
+                      </span>
+                      , incluyendo landing pages optimizadas, menús digitales y
+                      SEO básico para que tu negocio se encuentre con facilidad.
+                      Tu sitio no solo se verá bien: también venderá.
+                    </>
+                  ),
+                  reverse: true,
                 },
                 {
-                  imgS: resultsImg,
+                  img: resultsImg,
                   alt: "Productos",
                   title: "3. Lanzamos tus productos",
-                  desc: "Camisetas, etiquetas, QR, gorras, tazas, lo que tengas en mente, con tu identidad.",
+                  desc: (
+                    <>
+                      Creamos productos físicos que lleven tu marca al siguiente
+                      nivel: desde camisetas y gorras hasta{" "}
+                      <span className="underline decoration-[#34d399]/60 underline-offset-4">
+                        etiquetas, QR y tazas personalizadas
+                      </span>
+                      . No solo diseñamos, también fabricamos para que puedas
+                      ver tu idea hecha realidad y empezar a vender cuanto
+                      antes. Tu negocio se transforma en una experiencia
+                      tangible.
+                    </>
+                  ),
+                  reverse: false,
                 },
-              ].map(({ imgS, alt, title, desc }, idx) => (
+              ].map(({ img, alt, title, desc, reverse }, idx) => (
                 <div
                   key={idx}
-                  className="p-6 border rounded-lg shadow-sm bg-white"
-                  data-aos="zoom-in"
+                  className={`flex flex-col md:flex-row items-center ${
+                    reverse ? "md:flex-row-reverse" : ""
+                  } gap-10`}
+                  data-aos="fade-up"
                 >
-                  <div className="w-full h-[200px] flex items-center justify-center bg-gray-50 rounded-lg mb-6">
+                  {/* Imagen */}
+                  <div className="w-full md:w-1/2">
                     <img
-                      src={imgS}
+                      src={img}
                       alt={alt}
-                      className="max-h-[150px] max-w-[80%] object-contain"
+                      className="w-full h-auto max-h-[350px] object-contain rounded-xl"
                       loading="lazy"
                     />
                   </div>
-                  <h3 className="text-xl font-bold mb-2">{title}</h3>
-                  <p className="text-gray-600">{desc}</p>
+
+                  {/* Texto */}
+                  <div className="w-full md:w-1/2 text-left">
+                    <h3 className="text-2xl md:text-3xl font-bold mb-4">
+                      {title}
+                    </h3>
+                    <p className="text-gray-700 text-lg leading-relaxed">
+                      {desc}
+                    </p>
+                  </div>
                 </div>
               ))}
             </div>
@@ -339,7 +414,7 @@ const App: React.FC = () => {
             </h2>
             <p className="text-lg mb-8">
               No necesitas miles de dólares ni ser un experto para lanzar tu
-              negocio. En REUS Studio lo hacemos contigo desde cero.
+              negocio. En REDENLY Studio lo hacemos contigo desde cero.
             </p>
             <a
               href="https://wa.me/584127071299"
@@ -352,8 +427,7 @@ const App: React.FC = () => {
 
         {/* FOOTER */}
         <footer className="bg-black text-white text-center py-8 px-4">
-          <p className="mb-2">© 2025 REUS. Todos los derechos reservados.</p>
-          <p className="text-sm">Hecho en Venezuela</p>
+          <p className="mb-2">© 2025 REDENLY. Todos los derechos reservados.</p>
         </footer>
 
         {/* BOTÓN FLOTANTE DE WHATSAPP */}
