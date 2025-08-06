@@ -33,7 +33,7 @@ const App: React.FC = () => {
         {/* HERO SECTION */}
         <section
           id="inicio"
-          className="flex flex-col md:flex-row items-center min-h-screen px-6 py-20"
+          className="flex flex-col md:flex-row items-center min-h-screen px-6 py-20 mt-10 md:mt-0"
         >
           <div
             className="flex-1 text-center md:text-left"
